@@ -32,13 +32,3 @@ fs.readdir("./Events/", (error, f) => {
     client.on(event, events.bind(null, client));
     })
 })
-
-fs.readdir("./New", (error,f) =>{
-    if(error) console.log(error);
-    console.log(`${f.length} New Chapter Good`);
-    f.forEach((f) => {
-        const chaps = require(`./New/${f}`);
-        const chap = f.split(".")[0];
-    client.on('ready', chaps.bind(null, client));
-    })
-})
