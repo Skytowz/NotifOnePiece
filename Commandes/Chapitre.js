@@ -29,7 +29,7 @@ module.exports.run = async(client, message, args) =>{
 
     
     switch(args.length){
-        case 0:
+        case 1:
             chap= `/mangas/one-piece/${args}`;
             break;
         default:
