@@ -27,9 +27,15 @@ module.exports.run = async(client, message, args) =>{
 
 
 
-
-    if(args.length > 0) chap= `/mangas/one-piece/${args}`;
-    await  message.channel.send("Lien").then(async(m) => await m.edit(`https://scantrad.net${chap}`))
+    
+    switch(args.length){
+        case 0:
+            chap= `/mangas/one-piece/${args}`;
+            break;
+        default:
+            break;
+    }
+     await  message.channel.send("Lien").then(async(m) => await m.edit(`https://scantrad.net${chap}`))
 
 };
 module.exports.help = {
