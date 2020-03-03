@@ -6,7 +6,7 @@ module.exports = async(client, message) => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if(!message.content.startsWith(prefix)) return;
+    if(message.content.charAt(1)!=prefix) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const commande = args.shift();
