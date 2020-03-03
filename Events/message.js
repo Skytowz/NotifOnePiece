@@ -8,7 +8,7 @@ module.exports = async(client, message) => {
 
     if(message.content.charAt(1)!=prefix) return;
 
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(2).trim().split(/ +/g);
     const commande = args.shift();
 
     const cmd = client.commands.get(commande);
