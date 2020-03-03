@@ -1,7 +1,12 @@
 const Discord = require("discord.js");
 const $ = require('cheerio');
 const rp = require('request-promise');
-const url = 'http://scantrad.net/one-piece';
+var url;
+if(message.content.startWith('o')){
+    url='http://scantrad.net/one-piece';
+}else if(message.content.startWith('m')){
+    url='http://scantrad.net/my-hero-academia';
+}
 const opChap = [];
 module.exports.run = async(client, message, args) =>{
 
