@@ -6,7 +6,7 @@ module.exports.run = async(client, message, args) =>{
     var DemonSlayer="\n> Demon Slayer/Kimetsu No Yaiba : kny";
     var SNK="\n> Snk : snk";
     var Boruto="\n> Boruto : bor";
-    var text = "Pour voir le dernier chapitre ou un chapitre donné:```\n?<manga> [num_chap]"+OnePiece+Mha+BlackButler+DrStone+DemonSlayer+SNK+Boruto+"```";
+    var text = "Pour voir le dernier chapitre ou un chapitre donné:```\n.<manga> [num_chap]"+OnePiece+Mha+BlackButler+DrStone+DemonSlayer+SNK+Boruto+"```";
     var help = "Pour voir la liste des commandes:```\n?h```";
     
     await  message.channel.send("help").then(async(m) => await m.edit(text+help))
