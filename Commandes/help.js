@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 module.exports.run = async(client, message, args) =>{
     var OnePiece = "\n> One Piece : op";
     var Mha = "\n> My Hero Academia : mha";
@@ -6,12 +7,20 @@ module.exports.run = async(client, message, args) =>{
     var DemonSlayer="\n> Demon Slayer/Kimetsu No Yaiba : kny";
     var SNK="\n> Snk : snk";
     var Boruto="\n> Boruto : bor";
-    var text = "Pour voir le dernier chapitre ou un chapitre donné:```\n.<manga> [num_chap]"+OnePiece+Mha+BlackButler+DrStone+DemonSlayer+SNK+Boruto+"```";
-    var help = "Pour voir la liste des commandes:```\n.h```";
+    var text = "&<manga> [num_chap]"+OnePiece+Mha+BlackButler+DrStone+DemonSlayer+SNK;
+    const help = new Discord.RichEmbed()
+        .setColor('#8e238e')
+        .setTitle('Help')
+        .addField('Pour voir le dernier chapitre ou un chapitre donné:',text)
+        .addField('Pour faire une suggestion (dans le channel suggestions)','&suggestion [text]')
+        .addField('Pour afficher la page d\'aide','&help')
+        .setThumbnail("https://cdn.discordapp.com/attachments/683663363653238794/685227026617073719/cry.gif");
+
     
-    await  message.channel.send("help").then(async(m) => await m.edit(text+help))
+    
+    await  message.channel.send(help)
 
 };
 module.exports.help = {
-    name:"h"
+    name:"help"
 }
