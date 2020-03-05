@@ -17,7 +17,7 @@ module.exports.run = async(client, message, args) =>{
         while(opChap[j].substr(0,6) != "/manga"){
             j++;
             if(opChap[j].length > 10){
-                if(opChap[j].substr(0,6) == "/manga"){
+                if(opChap[j].substr(0,6) == "/manga"){ 
                     chap = opChap[j];
                     var tab = chap.split("/");
                     chap=tab[3];
