@@ -3,9 +3,10 @@ const $ = require('cheerio');
 const rp = require('request-promise');
 const opChap = [];
 var url = 'https://scantrad.net/black-butler';
-var site = 'https://scantrad.net/mangas/black-butler/'
+var site;
 let chap;
 module.exports.run = async(client, message, args) =>{
+    site = 'https://scantrad.net/mangas/black-butler/';
     rp(url)
       .then(function(html){
         //success!
