@@ -1,6 +1,6 @@
 {
   "name": "notif-one-piece",
-  "version": "1.0.0",
+  "version": "7.0.0",
   "description": "Bot de notif one piece",
   "main": "index.js",
   "dependencies": {
@@ -17,5 +17,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Skytowz",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skytowz/NotifOnePiece.git"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "bugs": {
+    "url": "https://github.com/Skytowz/NotifOnePiece/issues"
+  },
+  "homepage": "https://github.com/Skytowz/NotifOnePiece#readme"
 }

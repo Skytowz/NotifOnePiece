@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 module.exports.run = async(client, message, args) =>{
-    if(!message.member.roles.some(r=>["Dev", "Rainbow Kazekage"].includes(r.name))) return;
+    if(!message.member.roles.cache.some(r=>["Dev", "Rainbow Kazekage"].includes(r.name))) return;
     var text=""; 
     for(i of args){
         text+=i+" ";
