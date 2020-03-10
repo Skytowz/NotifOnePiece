@@ -11,7 +11,7 @@ module.exports.run = async(client, message, args) =>{
     if(message.createdAt.getMonth()+1<10) dateMsg+="0";
     dateMsg+=(message.createdAt.getMonth()+1)+"/"+message.createdAt.getFullYear();
 
-    const msg = new Discord.RichEmbed()
+    const msg = new Discord.MessageEmbed()
         .setColor('#0000ff')
         .setTitle('**Info**')
         .setDescription(text)

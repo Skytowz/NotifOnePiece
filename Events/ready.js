@@ -1,8 +1,4 @@
 module.exports =async(client) => {
 
-    client.user.setPresence({
-        game: {
-            name: "Scan Bot"
-        }
-    })
+    client.user.setActivity('Scan Bot', { type: 'PLAYING' });
 }

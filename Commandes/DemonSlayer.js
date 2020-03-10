@@ -3,9 +3,10 @@ const $ = require('cheerio');
 const rp = require('request-promise');
 const opChap = [];
 var url = 'https://scantrad.net/kimetsu-no-yaiba';
-var site = 'https://scantrad.net/mangas/kimetsu-no-yaiba/';
+var site;
 let chap;
 module.exports.run = async(client, message, args) =>{
+    site = 'https://scantrad.net/mangas/kimetsu-no-yaiba/';
     rp(url)
       .then(function(html){
         //success!
@@ -16,7 +17,7 @@ module.exports.run = async(client, message, args) =>{
         while(opChap[j].substr(0,6) != "/manga"){
             j++;
             if(opChap[j].length > 10){
-                if(opChap[j].substr(0,6) == "/manga"){
+                if(opChap[j].substr(0,6) == "/manga"){ 
                     chap = opChap[j];
                     var tab = chap.split("/");
                     chap=tab[3];
