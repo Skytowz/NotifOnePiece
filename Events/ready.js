@@ -2,7 +2,7 @@ module.exports =async(client) => {
 
     client.user.setPresence({
         game: {
-            name: "Maintenance"
+            name: "Scan Bot"
         }
     })
 }
