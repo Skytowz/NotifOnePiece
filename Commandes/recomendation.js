@@ -14,7 +14,7 @@ module.exports.run = async(client, message, args) =>{
     .then(function(html){
         //success!
         name= $('h1[class=h1titre] span[itemprop=name]',html).html();
-        text="Description:\n"+$('.description',html).text().split(" 1) ")[0].trim().replace('\n\n','\n');
+        text="Description:\n"+$('.description',html).text().split(" 1) ")[0].trim();
         image ="https://www.nautiljon.com/"+$(`img[alt=\"${name}\"][itemprop=image]`,html)[0].attribs.src;
         var info=$('.mb10',html).html();
         if(info.includes("Licencié en France : ")){
