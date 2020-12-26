@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const $ = require('cheerio');
 const rp = require('request-promise');
-const chan = "recommendation";
+const chan = "recommandation";
 
 module.exports.run = async(client, message, args) =>{
     if(message.channel.name!= chan) return;
