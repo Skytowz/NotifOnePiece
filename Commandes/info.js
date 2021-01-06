@@ -2,9 +2,7 @@ const Discord = require("discord.js");
 module.exports.run = async(client, message, args) =>{
     if(!message.member.roles.cache.some(r=>["Dev", "Rainbow Kazekage"].includes(r.name))) return;
     var text=""; 
-    for(i of args){
-        text+=i+" ";
-    }
+    for(i of args) text+=i+" ";
     var dateMsg = "";
     if(message.createdAt.getDay()<10) dateMsg+="0";
     dateMsg+=message.createdAt.getDay()+"/";
