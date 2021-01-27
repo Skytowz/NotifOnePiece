@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
 const fs = require('fs');
-    
+
 client.login(process.env.TOKEN);
 
 client.commands = new Discord.Collection();
@@ -32,8 +32,8 @@ fs.readdir("./Events/", (error, f) => {
     client.on(event, events.bind(null, client));
     })
 })
-var http = require('http');  
 
+var http = require('http');  
 http.createServer(function (req, res) {   
   res.write("I'm alive");   
   res.end(); 

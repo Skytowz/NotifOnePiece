@@ -1,0 +1,10 @@
+const Discord = require("discord.js");
+const chan = "suggestions";
+module.exports.run = async(client, message, args) =>{        
+     
+    await message.channel.send("yo")
+
+};
+module.exports.help = {
+    name:"name"
+}

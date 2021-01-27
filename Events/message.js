@@ -18,7 +18,7 @@ module.exports = async(client, message) => {
     }
     if(!message.content.startsWith(prefix)) return;
     
-    const args = message.content.slice(prefix.length).trim().split(/ +/g); // .slice = enleve prefix ; .trim = enleve espace ; .split args[] chaque espace nv mot args
+    const args = message.content.slice(prefix.length).trim().split(/(\s|\n)+/g); // .slice = enleve prefix ; .trim = enleve espace ; .split args[] chaque espace nv mot args
     const commande = args.shift(); // mets nom commande dans commande et enleve première case args;
     if(commande == "exploosion" ){
         if(message.member.roles.cache.some(r=>["Bot Testeur"].includes(r.name) )){
